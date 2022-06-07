@@ -20,7 +20,7 @@ namespace bdcsharp
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void closeButton_MouseEnter(object sender, EventArgs e)
@@ -67,9 +67,20 @@ namespace bdcsharp
             adapter.Fill(table);
 
             if (table.Rows.Count > 0)
-                MessageBox.Show("Yes");
+            {
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+            }
             else
                 MessageBox.Show("No");
+        }
+
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
         }
     }
 }

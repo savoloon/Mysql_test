@@ -32,6 +32,7 @@ namespace bdcsharp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.label1 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.userSurnameField = new System.Windows.Forms.TextBox();
             this.userNameField = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
@@ -41,12 +42,12 @@ namespace bdcsharp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.registerLabel = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +66,7 @@ namespace bdcsharp
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(8)))), ((int)(((byte)(24)))));
+            this.MainPanel.Controls.Add(this.registerLabel);
             this.MainPanel.Controls.Add(this.pictureBox3);
             this.MainPanel.Controls.Add(this.userSurnameField);
             this.MainPanel.Controls.Add(this.userNameField);
@@ -82,6 +84,17 @@ namespace bdcsharp
             this.MainPanel.TabIndex = 1;
             this.MainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseDown);
             this.MainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseMove);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(12, 106);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // userSurnameField
             // 
@@ -189,16 +202,18 @@ namespace bdcsharp
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
-            // pictureBox3
+            // registerLabel
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 106);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 52);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.registerLabel.Location = new System.Drawing.Point(121, 180);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(129, 16);
+            this.registerLabel.TabIndex = 7;
+            this.registerLabel.Text = "Уже есть аккаунт?";
+            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
             // 
             // RegisterForm
             // 
@@ -211,11 +226,11 @@ namespace bdcsharp
             this.Text = "RegisterForm";
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +249,6 @@ namespace bdcsharp
         private System.Windows.Forms.TextBox userSurnameField;
         private System.Windows.Forms.TextBox userNameField;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label registerLabel;
     }
 }
